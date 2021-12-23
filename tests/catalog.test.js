@@ -18,6 +18,7 @@ test('Catalog entries have all required fields', () => {
         _.forOwn(requiredFieldsTemplate, (value, propertyName) => {
             if (propertyName === 'Labor_Hours' && index < maxIndexWithoutLaborHours) {
                 // Old projects didn't require Labor_Hours, so don't enforce this check for them.
+                // hech yuq comment qushib quye
                 return;
             }
             expect(entry).toHaveProperty(propertyName);
